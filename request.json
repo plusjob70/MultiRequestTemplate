@@ -1,0 +1,32 @@
+{
+    "result_repository": {
+        "repository": "",
+        "repository_config": {
+            "project": "",
+        }
+    },
+    "request_list": [
+        {
+            "name": "",
+            "parser": "",
+            "base_setting": {
+                "host": "",
+                "method": "",
+                "path": "",
+                "query": {},
+                "header": {},
+                "cookie": {}
+            },
+            "variables": {
+                "paths": [],
+                "queries": [],
+                "headers": [],
+                "cookies": []
+            },
+            "repository_schema": {
+                "columns": [],
+                "types":   []
+            }
+        }
+    ]
+}
