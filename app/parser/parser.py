@@ -5,5 +5,5 @@ class AbstractParser(metaclass=ABCMeta):
 
     @classmethod
     @abstractmethod
-    def parse(cls, data: bytes) -> dict[str, str | int | float]:
+    def parse(cls, response: bytes) -> dict[str, str | int | float | bool]:
         pass
