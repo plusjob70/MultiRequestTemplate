@@ -11,7 +11,7 @@ class HTTPXRequestClient(AbstractHTTPRequestClient):
 
     def __init__(
             self,
-            host: str,
+            url: str,
             method: str,
             base_path: Types.PathType = "",
             base_query: Types.QueryType = None,
@@ -21,7 +21,7 @@ class HTTPXRequestClient(AbstractHTTPRequestClient):
     ):
         self.method = method
         self.__session: AsyncClient = AsyncClient(
-            base_url=self.resolve_url(host, base_path),
+            base_url=self.resolve_url(url, base_path),
             params=base_query,
             headers=base_header,
             cookies=base_cookie,

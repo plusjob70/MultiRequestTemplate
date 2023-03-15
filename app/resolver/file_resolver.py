@@ -160,9 +160,9 @@ class RequestFileResolver:
         base_setting_attr: dict = request.get("base_setting", {})
         RV.validate_type(base_setting_attr, dict)
 
-        RV.validate_required_keys(base_setting_attr, "host", "method")
-        host: str = base_setting_attr.get("host")
-        RV.validate_type(host, str)
+        RV.validate_required_keys(base_setting_attr, "url", "method")
+        url: str = base_setting_attr.get("url")
+        RV.validate_type(url, str)
 
         method = base_setting_attr.get("method")
         RV.validate_type(method, str)
@@ -179,7 +179,7 @@ class RequestFileResolver:
 
         cookie = base_setting_attr.get("cookie", None)
         RV.validate_types(cookie, dict, NoneType)
-        return ClientBaseVariable(host, method, path, query, header, cookie)
+        return ClientBaseVariable(url, method, path, query, header, cookie)
 
     @staticmethod
     def _extract_repository_attr(result_repository: dict[str, Any], support_repositories: list[str]) -> Type[AbstractRepository]:

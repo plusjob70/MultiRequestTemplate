@@ -10,7 +10,7 @@
             "name": "",
             "parser": "",
             "base_setting": {
-                "host": "",
+                "url": "",
                 "method": "",
                 "path": "",
                 "query": {},

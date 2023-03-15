@@ -5,7 +5,7 @@ from app.common.types import Types
 
 @dataclass
 class ClientBaseVariable:
-    host: str
+    url: str
     method: str
     base_path: Types.PathType
     base_query: Types.QueryType
